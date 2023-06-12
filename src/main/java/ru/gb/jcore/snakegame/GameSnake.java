@@ -24,7 +24,7 @@ public class GameSnake extends JFrame {  //наш класс должен быт
     final int START_SNAKE_Y = CANVAS_HEIGHT/2;
     final int SNAKE_DELAY = 150;  // задержка в скорости змейки
     int snakeSize = 0;
-    int currentDelay = SNAKE_DELAY;
+
     static boolean gameOver = false;
 
 
@@ -69,6 +69,7 @@ public class GameSnake extends JFrame {  //наш класс должен быт
             snake.setFood(food);
             poison = new Poison(snake);
             snake.setPoison(poison);
+            int currentDelay = SNAKE_DELAY;
 
             while ((!gameOver)){
                 snake.move();
@@ -80,18 +81,13 @@ public class GameSnake extends JFrame {  //наш класс должен быт
                 if(food.isEaten()){
                     food.appear();
                     poison.appear();
-                }
-
-                if(food.isEaten()){
-                    food.appear();
-                    poison.appear();
-                    if (snake.size() % 3 == 0){
-                        currentDelay = -2;
+                    if ((snake.size() % 3) == 0){
+                        currentDelay -= 10;
                     }
                 }
 
                 canvas.repaint();
-                sleep(SNAKE_DELAY);
+                sleep(currentDelay);
             }
 
             setTitle(GAME_OVER_MSG);
