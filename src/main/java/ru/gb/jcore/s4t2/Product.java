@@ -4,10 +4,14 @@ public class Product {
 
     private String title;
     private float price;
+    private Category category;
 
-    public Product(String title, float price) {
+    enum Category {standard, premium}
+
+    public Product(String title, float price, Category category) {
         this.title = title;
         this.price = price;
+        this.category = category;
     }
 
     public String getTitle() {
@@ -24,5 +28,13 @@ public class Product {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

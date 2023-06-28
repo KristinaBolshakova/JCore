@@ -5,11 +5,14 @@ public class Order {
     private Customer customer;
     private Product product;
     private int amount;
+    private float totalPrice;
 
-    public Order(Customer customer, Product product, int amount) {
+
+    public Order(Customer customer, Product product, int amount, float totalPrice) {
         this.customer = customer;
         this.product = product;
         this.amount = amount;
+        this.totalPrice = totalPrice;
     }
 
     public Customer getCustomer() {
@@ -34,5 +37,13 @@ public class Order {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(float totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }
