@@ -1,4 +1,4 @@
-package main.java.ru.gb.jcore.Liction4;
+package main.java.ru.gb.jcore.Lection4;
 
 import java.io.Closeable;
 import java.io.FileInputStream;

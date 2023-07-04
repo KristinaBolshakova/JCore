@@ -1,4 +1,4 @@
-package main.java.ru.gb.jcore.Liction4;
+package main.java.ru.gb.jcore.Lection4;
 
 public class LectionOrange {
 
